@@ -14,7 +14,3 @@ jobs:
         run: npm ci
       - name: Run cypress tests
         run: npx cypress run --browser chrome --headless
-      - name: Upload test results
-        uses: actions/upload-artifact@v3
-        with:
-          name: cypress-results
