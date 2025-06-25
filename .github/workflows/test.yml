@@ -29,4 +29,4 @@ jobs:
       - name: Build project
         run: npm run build
       - name: Deploy
-        run: echo "Simulating deployment... No environment configured."
+        run: echo "Simulating deployment... No environment configured......."
