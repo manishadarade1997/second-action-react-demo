@@ -11,7 +11,7 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Run cypress tests
         run: npx cypress run --browser chrome --headless
   deploy:
@@ -25,9 +25,9 @@ jobs:
         with:
           node-version: '18'
       - name: Install dependencies
-        run: npm ci
+        run: npm install
       - name: Build project
-        run: npm run build
+        run: np run build
       - name: Deploy
         run: echo "Simulating deployment... No environment configured."
       
