@@ -4,6 +4,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
+      - name: Fix permissions
+        run: chmod +x ./node_modules/.bin/cypress
       - name: Get code
         uses: actions/checkout@v3
       - name: Install NodeJS
@@ -27,7 +29,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Build project
-        run: np run build
+        run: npm run build
       - name: Deploy
         run: echo "Simulating deployment... No environment configured."
       
