@@ -13,7 +13,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Run Cypress tests
-        run: npx cypress run --browser chrome --headless
+        run: npx cypress run
   deploy:
     needs: test
     runs-on: ubuntu-latest
